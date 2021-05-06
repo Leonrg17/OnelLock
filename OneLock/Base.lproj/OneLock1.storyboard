@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="OneLock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="w2P-2N-X8h">
+                                <rect key="frame" x="72" y="239.34529203775332" width="244.00000000000006" height="314.00000000000011"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Unlock" image="Onelock">
+                                    <color key="titleColor" red="0.1764705926" green="0.7019608021" blue="0.60392159219999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="Verify:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vhf-Zi-cEp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.039215687659999998" green="0.094117648900000003" blue="0.15294116739999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="w2P-2N-X8h" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="M0u-Xn-ruE"/>
+                            <constraint firstItem="w2P-2N-X8h" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ii3-WM-fa9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ks6-t3-lWX"/>
+                    <connections>
+                        <outlet property="view" destination="8bC-Xf-vdC" id="ko3-Hh-kHt"/>
+                        <segue destination="0KB-2K-m8t" kind="showDetail" identifier="Passcodesegue" id="yxR-Ri-Ynm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.46153846153846" y="78.199052132701425"/>
+        </scene>
+        <!--View2-->
+        <scene sceneID="7C7-bf-tXH">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nek-aF-d28" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="Vuew2" modalTransitionStyle="crossDissolve" id="0KB-2K-m8t" customClass="View2" customModule="OneLock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xfo-Kw-1KY">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ga0-nt-USH">
+                                <rect key="frame" x="195" y="378" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cyq-1S-WfM">
+                                <rect key="frame" x="124" y="20" width="147" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Logout">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25" scale="large" weight="bold"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="LogOutsegue" id="kNl-C0-NKt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UdN-h6-Ppq">
+                                <rect key="frame" x="22" y="300" width="347" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.062077902257442474" green="0.85599750280380249" blue="0.74233138561248779" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Password Generator">
+                                            <attributes>
+                                                <font key="NSFont" size="30" name="Courier-Bold"/>
+                                                <font key="NSOriginalFont" size="36" name="Courier-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25" scale="large" weight="bold"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dKI-b5-bNb" kind="show" identifier="Generator" id="oep-J0-ouh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s1C-sF-PR2">
+                                <rect key="frame" x="22" y="181" width="347" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.062077902257442474" green="0.85599750280380249" blue="0.74233138561248779" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Password Vault">
+                                            <attributes>
+                                                <font key="NSFont" size="30" name="Courier-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25" scale="large" weight="bold"/>
+                                </state>
+                                <connections>
+                                    <segue destination="LhF-D0-cN9" kind="show" identifier="Password Vault" id="Lvj-jg-poM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oZ9-PK-c6f">
+                                <rect key="frame" x="22" y="423" width="347" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.062077902257442474" green="0.85599750280380249" blue="0.74233138561248779" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="HELP">
+                                            <attributes>
+                                                <font key="NSFont" size="30" name="Courier-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="m4B-Qh-PEf" kind="show" identifier="help" id="cBI-sc-tzj"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="Ue4-i3-8Xz">
+                                <rect key="frame" x="60" y="547" width="270" height="152"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="m0V-vw-e75"/>
+                        <color key="backgroundColor" red="0.019607843829999999" green="0.094117648900000003" blue="0.15686275059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Cyq-1S-WfM" firstAttribute="centerX" secondItem="m0V-vw-e75" secondAttribute="centerX" id="2Ik-sp-pKQ"/>
+                            <constraint firstItem="ga0-nt-USH" firstAttribute="centerY" secondItem="m0V-vw-e75" secondAttribute="centerY" id="COq-82-aTL"/>
+                            <constraint firstItem="ga0-nt-USH" firstAttribute="centerX" secondItem="m0V-vw-e75" secondAttribute="centerX" id="H0N-fx-Zp0"/>
+                            <constraint firstItem="Cyq-1S-WfM" firstAttribute="top" secondItem="m0V-vw-e75" secondAttribute="top" constant="20" id="Lg7-IW-uaN"/>
+                            <constraint firstItem="Cyq-1S-WfM" firstAttribute="width" secondItem="xfo-Kw-1KY" secondAttribute="width" multiplier="0.202564" id="Zwl-ao-ZMG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dyq-LQ-aUL"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="801.53846153846155" y="77.488151658767762"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="r0w-it-syx">
+            <objects>
+                <viewController id="dKI-b5-bNb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GH9-jP-Ezx">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Password Generator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1k-Vt-V3G">
+                                <rect key="frame" x="77" y="99" width="237" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="237" id="sue-OH-2SR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwt-AT-bag">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="homekit" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25" scale="large"/>
+                                </state>
+                                <connections>
+                                    <segue destination="0KB-2K-m8t" kind="show" identifier="home" id="1gk-MT-biO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Brl-Te-lQR"/>
+                        <color key="backgroundColor" red="0.019607843829999999" green="0.094117648900000003" blue="0.15686275059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="m1k-Vt-V3G" firstAttribute="centerX" secondItem="Brl-Te-lQR" secondAttribute="centerX" id="scR-9M-G3e"/>
+                            <constraint firstItem="m1k-Vt-V3G" firstAttribute="centerY" secondItem="Brl-Te-lQR" secondAttribute="centerY" id="tyD-zT-dLk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8gL-bg-enC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Um7-Kz-pAo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1604.6153846153845" y="81.753554502369667"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="udW-d4-Tlj">
+            <objects>
+                <viewController id="LhF-D0-cN9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z91-70-vgD">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password Vault" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XS4-zZ-kUw">
+                                <rect key="frame" x="100" y="46" width="179" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5UT-rl-VXM">
+                                <rect key="frame" x="0.0" y="0.0" width="92" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="homekit" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25" scale="large"/>
+                                </state>
+                                <connections>
+                                    <segue destination="0KB-2K-m8t" kind="show" identifier="home" id="WaD-zM-2fI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aJ5-yi-TNn"/>
+                        <color key="backgroundColor" red="0.019607843829999999" green="0.094117648900000003" blue="0.15686275059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rXH-bR-cYs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="APd-ss-h0w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2335.3846153846152" y="101.65876777251184"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rjq-y0-bCT">
+            <objects>
+                <viewController id="m4B-Qh-PEf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6L9-rL-CGR">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HELP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VX1-8l-Fhq">
+                                <rect key="frame" x="115" y="262" width="212" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDP-xg-tbw">
+                                <rect key="frame" x="16" y="0.0" width="69" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="homekit" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25" scale="large"/>
+                                </state>
+                                <connections>
+                                    <segue destination="0KB-2K-m8t" kind="show" identifier="home" id="58U-jn-dqW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KbO-JQ-RX7"/>
+                        <color key="backgroundColor" red="0.019607843829999999" green="0.094117648900000003" blue="0.15686275059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zcx-1M-I2O"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qmx-bC-nbn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3133.8461538461538" y="83.886255924170612"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="58U-jn-dqW"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="Onelock" width="350" height="450"/>
+        <image name="homekit" catalog="system" width="128" height="106"/>
+        <image name="lock" width="512" height="512"/>
+    </resources>
+</document>
